@@ -21,8 +21,7 @@ Bt = min((Omega_a1 − Omega_p1) ,(Omega_p2 − Omega_a2) ) ; Omega_c1 = Omega_p
 Omega_c2 = Omega_p2 − Bt/2;
 T = 2*pi / Omega_s;
 %Compute delta value
-40
-41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82
+
 delta_p = (10^(0.05*Ap) − 1) /(10^(0.05*Ap) + 1) ; ;
 delta = min(delta_p,delta_a); %Compute actual stop band attenuation
 Aaa = −20*log10(delta); %Choose Parameter alpha
@@ -102,9 +101,6 @@ p l o t ( f , 2 * a b s ( Y ( 1 : NFFT / 2 + 1 ) ) ) ;
 title ( ’DFT of Excitation Passed through an Ideal Bandstop Filter ’) xlabel( ’Frequency (rad/s) ’)
 ylabel(’|X(f)|’);grid on;
 
-168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
-198
-199
 %Plot the excitation in time domain
 figure ;
 stem ( n , x , ’ r ’ , ’ f i l l ’ ) ;
